@@ -1,106 +1,166 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
     <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
         <title>ltaoming's Homepage</title>
         <meta name="author" content="Taoming Liu">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   
-
-        <link rel="stylesheet" href="style.css">
-
+        <!-- LaTex Support -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                jax: ["input/TeX", "output/HTML-CSS"],
+                extensions: ["tex2jax.js"],
+                "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+                tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+                messageStyle: "none",
+                "HTML-CSS": { scale: 80, minScaleAdjust: 50 }
+            });
+    </script>
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+        <link rel="stylesheet" href="./css/index.css">
     </head>
 
     <body>
-        <br>
 
-        <div class="container">
-            <div class="my-nav">
-                <div id="my-title"><b><a href="/">ltaoming's Homepage</a></b></div>
-                <div class="my-nav-content">
-                    <ul>
-                        <li><a href="https://www.instagram.com/ltaoming727/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/taoming-liu-047b56259/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                        <li><a href="https://github.com/ltaoming" target="_blank" style="margin-right: 5px;"><i class="fab fa-github fa-2x"></i></a></li>
-                    </ul>
-                </div>
+        <!-- Header -->
+        <header class="header">
+            <nav class="navbar">
+                <!-- Home -->
+                <div class="logo">ltaoming's Homepage</div>
+    
+                <!-- Navigation Menu -->
+                <ul class="nav-links">
+                    <div class="menu">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li class="projects">
+                            <a href="#projects">Projects</a>
+                            <!-- Dropdown Menu -->
+                            <ul class="dropdown">
+                                <li><a href="#projects">Apps</a></li>
+                                <li><a href="#apps">Games</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </header>
+        
+
+        <!-- About Section -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1 class="home-heading">Hi! I am ltaoming.</h1>
+                    <p class="paragraph" id="welcome">
+                        Welcome to my page! I am an undergraduate student studying
+                        Computer Science and Mathematics. You can find a list of coding projects I've done here.
+                    </p>
+
+                    <div class="my-icon-content">
+                        <ul>
+                            <li><a href="https://www.instagram.com/ltaoming727/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></li>
+                            <li><a href="https://www.linkedin.com/in/taoming-liu-047b56259/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                            <li><a href="https://github.com/ltaoming" target="_blank" style="margin-right: 5px;"><i class="fab fa-github fa-2x"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <p class="paragraph" id="last-update">
+                        Last Updated: May 22nd, 2023
+                    </p>
+
+            </div>
+
+            <div class="image-myself">
+                <img src="./image/my_photo.JPG">
             </div>
             
-            <div>
-                <div class="my-header">About</div>
-                <p>
-                    Welcome to my web page! Here you will find the list of web development game programming project I have done.
-                </p>
-                
-                <p>Last Updated: March 7th, 2023</p>
+        </section>
+
+<!--         <section class="about" id="about">
+            <div class="about-content">
+                <h1 class="about-heading">About me</h1>
             </div>
-            <br>
+        </section> -->
 
-            <div id="projects">
-                <div class="my-header">Games</div>
-                <br>
+        <!-- Project Section -->
+        <section class="projects-section" id="projects">
+            <h1 class="projects-heading">Projects</h1>
 
-                <div class="row">
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="2048_image.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title">2048</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://ltaoming.github.io/2048-Game/" target="_blank">Demo</a>
-                                <a href="https://github.com/ltaoming/2048-Game" target="_blank">Repo</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="wordle_image.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title">Wordle</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://ltaoming.github.io/Wordle-game/" target="_blank">Demo</a>
-                                <a href="https://github.com/ltaoming/Wordle-game" target="_blank">Repo</a>
-                            </div>
-                        </div>
-                    </div>
- 
+            <!-- Apps Section -->
+            <h2 class="games-heading" id="apps">Apps</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="./image/manga_image.jpg">
+                    <p id="project-name">Manga Bookshelf</p>
+                    <p id="project-link">
+                        <a href="https://manga-book-shelf-frontend.vercel.app/" target="_blank">DEMO</a>
+                        <a href="https://github.com/ltaoming/4-final-project-manga-bookshelf" target="_blank">REPO</a>
+                    </p>
                 </div>
-                
-
-            </div>
-            <div id="projects">
-                <div class="my-header">Apps</div>
-                <br>
-
-                <div class="row">
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="todo_image.png">
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title">Todo List App</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="https://github.com/ltaoming/Todo-App" target="_blank">Repo</a>
-                            </div>
-                        </div>
-                    </div> 
+                <div class="project-card">
+                    <img src="./image/todo_image.png">
+                    <p id="project-name">Todo List</p>
+                    <p id="project-link">
+                        <a href="https://github.com/ltaoming/Todo-App" target="_blank">REPO</a>
+                    </p>
                 </div>
             </div>
+
+
+            <!-- Game Section -->
+            <h2 class="games-heading" id="games">Games</h2>
+                <div class="project-container">
+                    <div class="project-card">
+                        <img src="./image/2048_image.png">
+                        <p id="project-name">2048</p>
+                        <p id="project-link">
+                        <a href="https://ltaoming.github.io/2048-Game/" target="_blank">DEMO</a>
+                        <a href="https://github.com/ltaoming/2048-Game" target="_blank">REPO</a>
+                        </p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="./image/wordle_image.png">
+                        <p id="project-name">Wordle</p>
+                        <p id="project-link">
+                            <a href="https://ltaoming.github.io/Wordle-game/" target="_blank">DEMO</a>
+                            <a href="https://github.com/ltaoming/Wordle-game" target="_blank">REPO</a>
+                        </p>
+                    </div>
+                </div>
+
+            <!-- Other Section -->
+            <h2 class="games-heading" id="games">Other</h2>
+                <div class="project-container">
+                    <div class="project-card">
+                        <img src="./image/skiplist_image.png">
+                        <p id="project-name">CUDA skiplist</p>
+                        <p id="project-link">
+                        <a href="https://github.com/ltaoming/skiplist-cuda" target="_blank">REPO</a>
+                        </p>
+                    </div>
+                    
+<!--                     <div class="project-card">
+                        <img src="./image/wordle_image.png">
+                        <p id="project-name">Movie Recommendation</p>
+                        <p id="project-link">
+                            <a href="https://ltaoming.github.io/Wordle-game/" target="_blank">DEMO</a>
+                            <a href="https://github.com/ltaoming/Wordle-game" target="_blank">REPO</a>
+                        </p>
+                    </div> -->
+                </div>
+               
+
+        </section>
+
+<!--         <section class="blogs" id="blogs">
+            <h1>Blogs</h1>
+        </section> -->
     </body>
-
 </html>

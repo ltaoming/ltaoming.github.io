@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 90%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    /* padding: 10rem 9% 2rem; */
+    padding: 10vw;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 15px 50px 15px 25px; */
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    background-color: rgb(220, 217, 217);
+    color: #010101;
+    
+}
+
+.logo {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    transform: scale(.9, 1);
+}
+
+.menu {
+    font-size: 1.2rem;
+    display: flex;
+    /* gap: 1em; */
+}
+
+.menu li {
+    padding: 30px 25px 30px 25px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu li:hover{
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.projects .dropdown {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+    position: absolute;
+    background-color: rgb(220, 217, 217);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 10px black;
+}
+
+.dropdown li {
+    padding: 10px 15px 10px 15px;
+    font-size: 1rem;
+}
+
+.projects:hover .dropdown {
+    display: block;
+}
+
+
+
+.home {
+    display: flex;
+    justify-content: left;
+    background-color: whitesmoke;
+    padding: 10vw 14vw 10vw 12vw;
+}
+
+
+.home-content .home-heading {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4rem;
+    padding-top: 13vh;
+
+}
+
+.image-myself {
+    padding-left: 10vw;
+    padding-top: 13vh;
+    padding-bottom: auto;
+}
+
+.image-myself img{
+    width: 20vw;
+    border-radius: 20px;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+
+.my-icon-content {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: start;
+}
+
+
+.my-icon-content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.my-icon-content li {
+    font-size: min(3h, 3vw);
+    float: left;
+}
+
+
+.my-icon-content li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 2px 3px;
+    margin-right: 24px;
+    text-decoration: none;
+}
+
+.my-icon-content li a:hover {
+    background-color: white;
+}
+
+
+
+.about {
+    background-color: rgb(220, 217, 217);
+}
+
+.projects-section {
+    background-color: rgb(220, 217, 217);
+}
+
+.projects-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1200;
+    margin-bottom: 3vh;
+}
+
+.projects .games-heading {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.project-container {
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-container .project-card {
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.2);
+    flex-direction: column; /* Added */
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 20rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    background-color: whitesmoke;
+}
+
+.project-container .project-description {
+    flex: 10px;
+}
+
+.project-card img {
+    aspect-ratio : 1 / 1;
+    width: 100%;
+/*    height: 100%;*/
+    /* min-width: 150px; */
+    border-radius: 5px;
+    
+}
+
+.project-card #project-name {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid grey;
+
+}
+
+.project-card #project-link{
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin-top: 0.8rem;
+}
+
+.project-card #project-link a {
+    text-decoration: none;
+    color: orange;
+    margin-right: 0.5rem;
+}
+
+.project-card #project-link a:hover {
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
+
+#apps {
+    padding-top: 5vh;
+}
+
+.blogs {
+    background-color: rgb(220, 217, 217);
+}
